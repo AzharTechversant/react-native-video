@@ -1,7 +1,12 @@
+/*
+    Author: Azhar jaman k
+    created date: 22/08/2022
+    Updated date: 22/08/2022
+    changes: ViewPropTypes and ImagePropTypes removed from deprecated-react-native-prop-types
+*/
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, requireNativeComponent, NativeModules, UIManager, View, Image, Platform, findNodeHandle } from 'react-native';
-import { ViewPropTypes, ImagePropTypes } from 'deprecated-react-native-prop-types';
 import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
 import TextTrackType from './TextTrackType';
 import FilterType from './FilterType';
@@ -427,7 +432,7 @@ Video.propTypes = {
   maxBitRate: PropTypes.number,
   resizeMode: PropTypes.string,
   poster: PropTypes.string,
-  posterResizeMode: ImagePropTypes.resizeMode,
+  // posterResizeMode: ImagePropTypes.resizeMode,
   repeat: PropTypes.bool,
   automaticallyWaitsToMinimizeStalling: PropTypes.bool,
   allowsExternalPlayback: PropTypes.bool,
@@ -529,7 +534,6 @@ Video.propTypes = {
   translateX: PropTypes.number,
   translateY: PropTypes.number,
   rotation: PropTypes.number,
-  ...ViewPropTypes,
 };
 
 const RCTVideo = requireNativeComponent('RCTVideo', Video, {
